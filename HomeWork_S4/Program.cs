@@ -177,6 +177,41 @@ do
       PrintMas(arra4);
     }
 
+// Задача 5: N кеглей выставили в один ряд, занумеровав их слева направо числами от 1 до N. 
+// Затем по этому ряду бросили K шаров, при этом i-й шар сбил все кегли с номерами от li до ri включительно. 
+// Определите, какие кегли остались стоять на месте.
+
+  if (otvet1 == 5)
+    {
+      int n5,k5,l5,r5;
+      int [] arra5;
+      System.Console.Write("Введите количество кеглей: ");
+      n5 = Proverca_chisla();
+      System.Console.Write("Сколько шаров бросили: ");
+      k5 = Proverca_chisla();
+      
+      arra5  = new int [n5];
+      for (int i5=0; i5<k5; i5++)
+      {
+        System.Console.Write($"Введите c какой кегли сбил {i5+1} шар: ");
+        l5 = Proverca_chisla()-1;
+        System.Console.Write($"Введите до какой кегли сбил {i5+1} шар: ");
+        r5 = Proverca_chisla()-1;
+        for (int j5=l5-1; j5<r5; j5++)
+        {
+          arra5[j5]= 1;
+        }            
+      }
+      
+      System.Console.WriteLine("Следущие кегли не были сбиты:");
+      for (int i5=0;i5<arra5.Length;i5++)
+      { if (arra5 [i5]==0){System.Console.Write("I");}
+        else
+        {System.Console.Write(".");}
+      }
+      System.Console.WriteLine("");      
+    }
+
 
 //Конец тела задач    
   Console.Write("Нажмите <Enter> для продолжения... ");
