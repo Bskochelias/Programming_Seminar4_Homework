@@ -121,6 +121,27 @@ do
       System.Console.WriteLine($"Четных числе в массиве: {count}");      
     }
 
+// Задача 2: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+  if (otvet1 == 2)
+    {
+      int [] arra2;
+      arra2 = R_Mas();
+      System.Console.WriteLine("Начальный массив:");
+      PrintMas(arra2);
+      
+      int count=0;
+      for (int i2=0;i2<arra2.Length;i2++)
+      {
+        if (i2 % 2 != 0) {
+//          System.Console.WriteLine($"{i2} = {arra2[i2]}");
+          count = count +arra2[i2];};
+      }
+
+      System.Console.WriteLine($"Сумму элементов, стоящих на нечётных позициях: {count}");      
+    }
+ 
+
 
 
 //Конец тела задач    
